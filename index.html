@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travesía Psicopedagógica | Lic. Ariadna Ornella Salomé Cariaga</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
 --verde:#6B8E6E;
+--verde-oscuro:#4F6F60;
 --terracota:#C67C5C;
 --crema:#F5F1E8;
 --beige:#E8DFD0;
---texto:#3D3D3D;
+--texto:#2F2F2F;
 --blanco:#FFFFFF;
 --negro:#111111;
 }
@@ -24,7 +25,8 @@ body{
 font-family:'Open Sans',sans-serif;
 background:var(--crema);
 color:var(--texto);
-line-height:1.7;
+line-height:1.8;
+font-size:18px;
 }
 
 h1,h2,h3{
@@ -36,9 +38,8 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(255,255,255,0.95);
-backdrop-filter:blur(10px);
 z-index:1000;
-padding:15px 0;
+padding:18px 0;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -52,198 +53,191 @@ align-items:center;
 }
 
 .logo{
-font-size:1.6rem;
+font-size:1.8rem;
 font-weight:700;
 color:var(--verde);
 text-decoration:none;
 }
 
-.nav-links{
-list-style:none;
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:var(--texto);
-font-weight:600;
-font-size:0.9rem;
-}
-
 .hero{
-margin-top:80px;
-padding:90px 20px;
+margin-top:90px;
+padding:100px 20px;
 background:linear-gradient(135deg,var(--beige),var(--crema));
 text-align:center;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:3.4rem;
 color:var(--verde);
 }
 
 .hero .tagline{
 font-style:italic;
 color:var(--terracota);
-margin:15px 0 30px;
-font-size:1.3rem;
+margin:20px 0 25px;
+font-size:1.5rem;
 }
 
 .hero img{
-width:230px;
-height:230px;
+width:240px;
+height:240px;
 border-radius:50%;
 object-fit:cover;
-margin:30px auto 15px;
+margin:35px auto 20px;
 border:6px solid var(--blanco);
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,0.18);
 }
 
 .foto-info{
-font-size:0.9rem;
+font-size:1rem;
 color:#555;
-margin-bottom:25px;
+margin-bottom:30px;
+}
+
+.hero p{
+max-width:750px;
+margin:0 auto;
+font-size:1.2rem;
 }
 
 .btn{
 display:inline-block;
 background:var(--terracota);
 color:white;
-padding:14px 38px;
+padding:16px 42px;
 border-radius:30px;
 text-decoration:none;
-font-weight:600;
-margin-top:25px;
+font-weight:700;
+margin-top:35px;
 }
 
 section{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 section h2{
 text-align:center;
-font-size:2.5rem;
+font-size:2.8rem;
 color:var(--verde);
-margin-bottom:40px;
+margin-bottom:25px;
+}
+
+.subtitulo{
+text-align:center;
+font-weight:600;
+margin-bottom:50px;
 }
 
 .servicios{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+padding:35px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
 }
 
 .card h3{
 color:var(--terracota);
 margin-bottom:15px;
+font-size:1.5rem;
 }
 
 .metodologia{
 background:var(--beige);
-padding:80px 20px;
 }
 
 .pilares{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
 
 .pilar{
 text-align:center;
-padding:25px;
+padding:30px;
 }
 
 .pilar span{
-font-size:2.6rem;
+font-size:3rem;
 display:block;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .curso{
 background:white;
-border-radius:20px;
-padding:60px 30px;
-box-shadow:0 10px 40px rgba(0,0,0,0.08);
+border-radius:22px;
+padding:70px 35px;
+box-shadow:0 15px 45px rgba(0,0,0,0.1);
 text-align:center;
-border:2px solid var(--beige);
+border:3px solid var(--beige);
 }
 
 .curso .tag{
 display:inline-block;
 background:var(--verde);
 color:white;
-padding:6px 16px;
+padding:8px 20px;
 border-radius:20px;
-font-size:0.8rem;
-margin-bottom:20px;
+font-size:0.9rem;
+margin-bottom:25px;
 }
 
 .curso h3{
-font-size:2rem;
+font-size:2.4rem;
 color:var(--terracota);
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.curso p{
-max-width:650px;
-margin:0 auto 20px;
+.curso ul{
+list-style:none;
+margin:25px 0;
+}
+
+.curso li{
+margin-bottom:10px;
+font-weight:600;
 }
 
 .disclaimer{
-background:#f0f0f0;
-padding:20px;
-border-radius:10px;
-font-size:0.85rem;
+background:#f1f1f1;
+padding:25px;
+border-radius:12px;
+font-size:0.95rem;
 text-align:left;
-margin-top:30px;
-border-left:4px solid var(--verde);
+margin-top:35px;
+border-left:5px solid var(--verde);
 }
 
 .sobre-mi{
 display:grid;
-grid-template-columns:1fr 2fr;
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:50px;
 }
 
-.sobre-mi img{
-width:100%;
+.caja-destacada{
+background:var(--verde);
+color:white;
+padding:30px;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.credenciales{
-background:var(--beige);
-padding:20px;
-border-radius:10px;
-margin-top:25px;
-}
-
-.credenciales li{
-list-style:none;
-margin-bottom:10px;
 }
 
 .contacto{
-background:var(--verde);
+background:var(--verde-oscuro);
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 .contacto a{
 color:white;
-font-weight:600;
+font-weight:700;
 text-decoration:none;
 }
 
@@ -251,127 +245,128 @@ footer{
 background:var(--negro);
 color:white;
 text-align:center;
-padding:40px 20px;
-font-size:0.9rem;
-}
-
-footer p{
-margin-bottom:8px;
+padding:45px 20px;
+font-size:0.95rem;
 }
 
 footer .ley{
-font-size:0.8rem;
+font-size:0.85rem;
 opacity:0.8;
 margin-top:15px;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:2.2rem;}
+.hero h1{font-size:2.4rem;}
 .sobre-mi{grid-template-columns:1fr;}
-.nav-links{display:none;}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="nav-container">
-<a class="logo">Travesía Psicopedagógica</a>
-<ul class="nav-links">
-<li><a href="#servicios">Servicios</a></li>
-<li><a href="#abordaje">Abordaje</a></li>
-<li><a href="#curso">Curso</a></li>
-<li><a href="#sobre">Sobre mí</a></li>
-<li><a href="#contacto">Contacto</a></li>
-</ul>
-</div>
-</nav>
-
 <section class="hero">
 <h1>Travesía Psicopedagógica</h1>
 <p class="tagline">“El aprendizaje es el motor de la autonomía”</p>
 
 <img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga – Psicopedagoga">
+
 <div class="foto-info">
 Lic. Ariadna Ornella Salomé Cariaga<br>
 Matrícula Profesional MP P 126475 – Provincia de Córdoba
 </div>
 
 <p>
-Acompaño procesos de aprendizaje cuando aparecen barreras, desde una mirada clínica, inclusiva y respetuosa de cada trayectoria.
+Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso de aprendizaje encuentra barreras, desde la inclusión escolar hasta el fortalecimiento cognitivo en adultos.
 </p>
 
 <a class="btn" href="https://wa.me/543541215892" target="_blank">Comenzar la travesía</a>
 </section>
 
-<section id="servicios">
+<section>
 <h2>Servicios Profesionales</h2>
+<p class="subtitulo">Atención online</p>
+
 <div class="servicios">
-<div class="card"><h3>Evaluaciones psicopedagógicas</h3><p>Informes clínicos claros y funcionales.</p></div>
-<div class="card"><h3>Tratamiento psicopedagógico</h3><p>Intervenciones personalizadas en todas las etapas de la vida.</p></div>
-<div class="card"><h3>Acompañamiento e inclusión escolar</h3><p>Trabajo articulado con escuelas y familias.</p></div>
-<div class="card"><h3>Adecuaciones curriculares</h3><p>Diseño de estrategias pedagógicas inclusivas.</p></div>
+<div class="card"><h3>🧠 Evaluaciones psicopedagógicas</h3>
+<p>Informes técnicos y clínicos que funcionan como mapas reales. Elaboración de documentos que permiten a médicos, escuelas y familias hablar el mismo idioma.</p></div>
+
+<div class="card"><h3>📄 Diagnóstico integral</h3>
+<p>Abordaje clínico de dificultades del aprendizaje en niños, adolescentes y adultos. Especialización en neuropsicología del aprendizaje.</p></div>
+
+<div class="card"><h3>🌱 Tratamiento psicopedagógico</h3>
+<p>Intervenciones personalizadas basadas en estrategias de rehabilitación y acompañamiento en proyectos de vida y desarrollo académico.</p></div>
+
+<div class="card"><h3>📘 Adecuaciones curriculares</h3>
+<p>Diseño de planes de intervención adaptados a cada perfil, potenciando la autonomía del estudiante en instituciones educativas.</p></div>
+
+<div class="card"><h3>🏫 Acompañamiento escolar</h3>
+<p>Trabajo interdisciplinario con familias y equipos docentes para implementar estrategias de inclusión real en casos particulares.</p></div>
+
+<div class="card"><h3>🧭 Adolescentes y adultos mayores</h3>
+<p>Fortalecimiento cognitivo, alto rendimiento y estrategias de aprendizaje a lo largo de toda la vida, incluyendo procesos de orientación vocacional.</p></div>
 </div>
 </section>
 
-<section class="metodologia" id="abordaje">
+<section class="metodologia">
 <h2>Mi abordaje</h2>
 <div class="pilares">
-<div class="pilar"><span>🧠</span><p>Mirada integral del sujeto y su contexto.</p></div>
-<div class="pilar"><span>📄</span><p>Diagnósticos como herramientas, no etiquetas.</p></div>
-<div class="pilar"><span>🌱</span><p>Inclusión real y cotidiana.</p></div>
+<div class="pilar"><span>📊</span><p>Rigurosidad científica y planes de acción claros.</p></div>
+<div class="pilar"><span>🗺️</span><p>Informes con sentido: mapas reales para saber exactamente qué paso dar mañana.</p></div>
+<div class="pilar"><span>🤝</span><p>Visión de inclusión real: el entorno como facilitador y no como obstáculo.</p></div>
 </div>
 </section>
 
-<section id="curso">
+<section>
 <h2>Propuesta de formación</h2>
 <div class="curso">
 <span class="tag">PRIMER LANZAMIENTO</span>
 <h3>Escribir para sanar</h3>
-<p>
-Espacio de escritura reflexiva y creativa como herramienta de bienestar emocional,
-orientado al autoconocimiento y la elaboración subjetiva.
-</p>
+
+<p>Herramientas de escritura para el bienestar emocional. Método respaldado por años de investigación académica y práctica literaria.</p>
 <p><em>“Sanando las heridas de la infancia y fortaleciendo tu presente”</em></p>
 
-<a class="btn" href="https://wa.me/543541215892" target="_blank">Consultar disponibilidad</a>
+<ul>
+<li>✔ Trabajo personalizado</li>
+<li>✔ Seguimiento por WhatsApp</li>
+<li>✔ Espacio de covisión</li>
+</ul>
+
+<a class="btn" href="https://wa.me/543541215892" target="_blank">Reservar mi lugar</a>
 
 <div class="disclaimer">
-Esta propuesta no constituye tratamiento psicoterapéutico ni reemplaza atención médica o psicológica.
-Se ofrece como espacio de acompañamiento psicopedagógico y escritura personal.
+Esta actividad de formación ofrece estrategias de escritura creativa y reflexiva como herramientas de autoconocimiento y procesamiento emocional desde un enfoque psicopedagógico. No constituye tratamiento psicoterapéutico ni reemplaza atención médica o psicológica profesional. Dirigido a público general interesado en explorar el vínculo entre escritura y bienestar emocional.
 </div>
 </div>
 </section>
 
-<section id="sobre">
+<section>
 <h2>Sobre mí</h2>
 <div class="sobre-mi">
-<img src="perfil.jpg" alt="Lic. Ariadna Cariaga">
-<div>
-<p>Soy Licenciada en Psicopedagogía, con experiencia clínica y escolar en el acompañamiento de trayectorias educativas diversas.</p>
-<div class="credenciales">
-<ul>
-<li>Licenciada en Psicopedagogía</li>
-<li>Matrícula MP P 126475</li>
-<li>Intervenciones clínicas e inclusivas</li>
-</ul>
-</div>
+<p>
+Soy Licenciada en Psicopedagogía egresada de la Facultad de Educación y Salud – Universidad Provincial de Córdoba (FES-UPC), con formación integral en diagnóstico y tratamiento de dificultades de aprendizaje. Mi especialización incluye neuropsicología del aprendizaje y estrategias de inclusión escolar.
+</p>
+
+<div class="caja-destacada">
+<p><strong>Matrícula Profesional:</strong> MP P 126575</p>
+<p>Licenciada en Psicopedagogía – FES-UPC</p>
+<p>Especialización en Neuropsicología del Aprendizaje</p>
+<p>Formación en Estrategias de Inclusión Escolar</p>
+<p>Abordaje clínico interdisciplinario</p>
 </div>
 </div>
 </section>
 
-<section class="contacto" id="contacto">
-<h2>Contacto</h2>
+<section class="contacto">
+<h2>Hablemos</h2>
+<p>Si buscás transformar la incertidumbre de un diagnóstico en una estrategia de evolución personal, estoy aquí para acompañarte.</p>
+<p>📲 WhatsApp – respuestas las 24 hs<br>
+<a href="https://wa.me/543541215892">+54 3541 215892</a></p>
+<p>📧 Consultas detalladas: <a href="mailto:lic.cariaga@gmail.com">lic.cariaga@gmail.com</a></p>
 <p>Atención online</p>
-<p>
-<a href="mailto:lic.cariaga@gmail.com">lic.cariaga@gmail.com</a><br>
-<a href="https://wa.me/543541215892">+54 3541 215892</a>
-</p>
 </section>
 
 <footer>
-<p><strong>Travesía Psicopedagógicas</strong></p>
+<p><strong>Travesía Psicopedagógica</strong></p>
 <p>Lic. Ariadna Ornella Salomé Cariaga | MP P 126475</p>
 <p>lic.cariaga@gmail.com | +54 3541 215892</p>
 <div class="ley">
