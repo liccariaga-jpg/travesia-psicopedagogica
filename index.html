@@ -1,187 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travesía Psicopedagógica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travesía Psicopedagógica | Lic. Ariadna Cariaga</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --verde-salvia: #6B8E6E;
+            --terracota: #C67C5C;
+            --crema: #F5F1E8;
+            --beige: #E8DFD0;
+            --texto: #3D3D3D;
+            --blanco: #FFFFFF;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f6f1e7;
-      color: #3b3b3b;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-      color: #6f8f6b;
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--texto);
+            line-height: 1.6;
+            background-color: var(--crema);
+        }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #ede4d3;
-    }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
 
-    .frase {
-      font-style: italic;
-      color: #c57b57;
-      margin-top: 10px;
-    }
+        /* BOTÓN WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
 
-    .nombre {
-      margin: 15px 0;
-      font-weight: 500;
-    }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-    .intro {
-      max-width: 700px;
-      margin: auto;
-    }
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-    .btn {
-      background: #c57b57;
-      color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      font-size: 16px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 25px;
-      transition: all 0.3s ease;
-    }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .btn:hover {
-      background: #b06a4a;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--verde-salvia);
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-    .seccion {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-    .sub {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
+        /* HERO */
+        .hero {
+            margin-top: 70px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--beige), var(--crema));
+            text-align: center;
+        }
 
-    .fondo {
-      background: #e8dfcf;
-      border-radius: 20px;
-      padding: 40px 20px;
-    }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .perfil {
-      width: 160px;
-      border-radius: 50%;
-      display: block;
-      margin: 20px auto;
-    }
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--verde-salvia);
+        }
 
-    footer {
-      background: #3b3b3b;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-      font-size: 14px;
-    }
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--terracota);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
 
-    .contacto {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
+        .hero-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            margin: 30px auto;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-    .contacto a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-    }
+        .btn-primary {
+            display: inline-block;
+            background: var(--terracota);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    .contacto i {
-      margin-right: 6px;
-    }
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 28px; }
-      h2 { font-size: 22px; }
-      .hero { padding: 40px 15px; }
-      .card { padding: 16px; }
-      .perfil { width: 130px; }
-    }
-  </style>
+        footer {
+            background: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <h1>Travesía Psicopedagógica</h1>
-  <p class="frase">"El aprendizaje es el motor de la autonomía"</p>
-  <p class="nombre">Lic. Ariadna Ornella Salome Cariaga – Psicopedagoga</p>
-  <p class="intro">
-    Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso de aprendizaje encuentra barreras, desde la inclusión escolar hasta el fortalecimiento cognitivo en adultos.
-  </p>
+<a href="https://wa.me/543541215892" class="whatsapp-float" target="_blank">💬</a>
 
-  <a class="btn" href="https://wa.me/543541215892" target="_blank">
-    Comenzar mi travesía
-  </a>
-</header>
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">Travesía Psicopedagógica</a>
+    </div>
+</nav>
 
-<section class="seccion">
-  <h2>Servicios Profesionales</h2>
-  <p class="sub">Atención online</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Travesía Psicopedagógica</h1>
+        <p class="tagline">"El aprendizaje es el motor de la autonomía"</p>
 
-  <div class="card"><h3>Evaluaciones Psicopedagógicas</h3><p>Informes técnicos y clínicos que funcionan como mapas reales.</p></div>
-  <div class="card"><h3>Diagnóstico Integral</h3><p>Abordaje clínico de dificultades del aprendizaje.</p></div>
-  <div class="card"><h3>Tratamiento Psicopedagógico</h3><p>Intervenciones personalizadas y acompañamiento.</p></div>
-  <div class="card"><h3>Adecuaciones Curriculares</h3><p>Planes de intervención adaptados.</p></div>
-  <div class="card"><h3>Acompañamiento Escolar</h3><p>Estrategias de inclusión real.</p></div>
-  <div class="card"><h3>Adultos y Adultos Mayores</h3><p>Fortalecimiento cognitivo.</p></div>
+        <!-- TU FOTO -->
+        <img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga" class="hero-image">
+
+        <p>Mi trabajo es asegurar que ese motor no se detenga.</p>
+
+        <a href="https://wa.me/543541215892" class="btn-primary" target="_blank">
+            Comenzar mi travesía
+        </a>
+    </div>
 </section>
 
-<section class="seccion fondo">
-  <h2>Mi Abordaje</h2>
-  <p>Rigurosidad científica y planes de acción claros.</p>
-</section>
+<section>
+    <h2>Sobre mí</h2>
 
-<section class="seccion">
-  <h2>Sobre mí</h2>
-  <img src="perfil.jpg" class="perfil">
-  <p>
-    Soy Licenciada en Psicopedagogía egresada de la Universidad Provincial de Córdoba (UPC).
-  </p>
+    <!-- MISMA FOTO -->
+    <img src="perfil.jpg" alt="Lic. Ariadna Cariaga" class="hero-image">
+
+    <p>
+        Licenciada en Psicopedagogía, con formación clínica e institucional,
+        especializada en diagnóstico, intervención y acompañamiento de trayectorias educativas.
+    </p>
 </section>
 
 <footer>
-  <p><strong>Lic. Ariadna Ornella Salome Cariaga</strong></p>
-  <p>MP P 12-6475 – Córdoba, Argentina</p>
-
-  <div class="contacto">
-    <a href="https://wa.me/543541215892" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-    <a href="mailto:lic.cariaga@gmail.com">
-      <i class="fas fa-envelope"></i> Email
-    </a>
-  </div>
+    <p><strong>Travesía Psicopedagógica</strong></p>
+    <p>Lic. Ariadna Ornella Salomé Cariaga | MP P 12-6475</p>
+    <p>lic.cariaga@gmail.com | +54 3541 215892</p>
+    <p style="font-size:0.8rem; margin-top:15px;">
+        Ejercicio profesional regulado por la Ley 7619 de la Provincia de Córdoba
+    </p>
 </footer>
 
 </body>
