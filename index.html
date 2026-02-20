@@ -15,119 +15,167 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--crema);
-            color: var(--texto);
-            line-height: 1.6;
-        }
-
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--crema); color: var(--texto); line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
+        /* HEADER */
         header { text-align: center; padding: 60px 20px; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); }
-        h1 { font-size: 3.2rem; margin-bottom: 10px; }
-        .quote { font-style: italic; color: var(--terracota); font-size: 1.3rem; margin-bottom: 30px; }
+        h1 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); font-size: 3.5rem; margin-bottom: 5px; }
+        .sub-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terracota); font-size: 1.5rem; margin-bottom: 35px; }
+        
+        .profile-img { width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 8px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        
+        .intro-box { background: var(--blanco); padding: 35px; border-radius: 25px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .intro-box p { font-size: 1.1rem; text-align: justify; }
 
-        .profile-img {
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
+        .btn-travesia { display: inline-block; background-color: var(--terracota); color: white; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 600; margin-bottom: 25px; transition: 0.3s; }
+        .btn-travesia:hover { transform: scale(1.03); opacity: 0.9; }
 
-        section { padding: 40px 0; }
-        .section-title { text-align: center; font-size: 2.3rem; margin-bottom: 30px; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--terracota); margin: 10px auto; }
+        /* SECCIONES */
+        section { padding: 50px 0; }
+        h2.sec-title { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--verde-salvia); margin-bottom: 10px; }
+        .atencion-tag { text-align: center; color: var(--terracota); font-weight: 700; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; }
 
-        .full-text-box { background: var(--blanco); padding: 40px; border-radius: 25px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        .full-text-box h3 { color: var(--terracota); margin-bottom: 15px; font-size: 1.7rem; }
-        .full-text-box p { margin-bottom: 15px; text-align: justify; }
+        /* SERVICIOS DETALLADOS */
+        .service-card { background: var(--blanco); padding: 35px; border-radius: 20px; margin-bottom: 25px; border-left: 6px solid var(--verde-salvia); }
+        .service-card h3 { color: var(--terracota); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; }
+        .service-card p { font-size: 1rem; color: #555; }
 
-        .btn-ws {
-            display: inline-block;
-            background-color: var(--terracota);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 20px 0;
-            transition: 0.3s;
-        }
+        /* ABORDAJE ICONOS */
+        .grid-abordaje { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
+        .icon-box { text-align: center; background: white; padding: 30px; border-radius: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+        .icon-box span { font-size: 3.5rem; display: block; margin-bottom: 15px; }
+        .icon-box h4 { color: var(--verde-salvia); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 10px; }
 
-        .footer-contact { background-color: var(--verde-salvia); color: white; padding: 60px 20px; text-align: center; border-radius: 40px 40px 0 0; }
-        footer { background: #222; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
+        /* CURSO: ESCRIBIR PARA SANAR */
+        .curso-container { background: var(--blanco); border: 3px solid var(--terracota); padding: 45px; border-radius: 35px; margin-top: 40px; position: relative; }
+        .curso-container h2 { color: var(--terracota); font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; text-align: center; margin-bottom: 10px; }
+        .curso-tag { text-align: center; font-weight: 600; color: var(--texto); margin-bottom: 25px; display: block; }
+        
+        .curso-list { list-style: none; margin: 25px 0; }
+        .curso-list li { margin-bottom: 15px; padding-left: 30px; position: relative; font-size: 1.1rem; }
+        .curso-list li::before { content: '✦'; position: absolute; left: 0; color: var(--terracota); font-weight: bold; }
+        
+        .btn-reserva { display: block; text-align: center; background: var(--verde-salvia); color: white; padding: 22px; border-radius: 18px; text-decoration: none; font-weight: 700; font-size: 1.3rem; margin-top: 30px; transition: 0.3s; }
+        .btn-reserva:hover { background: #637d65; }
+
+        /* FOOTER Y ESPACIOS */
+        .footer-main { background: var(--verde-salvia); color: white; padding: 70px 20px; text-align: center; border-radius: 50px 50px 0 0; margin-top: 50px; }
+        .footer-main h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; margin-bottom: 20px; }
+        .info-data { font-size: 1.2rem; margin: 15px 0; }
+        .nota-importante { font-size: 0.9rem; margin-top: 30px; opacity: 0.8; font-style: italic; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        @media (max-width: 600px) { h1 { font-size: 2.4rem; } .profile-img { width: 200px; height: 200px; } }
     </style>
 </head>
 <body>
 
     <header class="container">
         <h1>Travesía Psicopedagógica</h1>
-        <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
+        <p class="sub-title">"El aprendizaje es el motor de la autonomía"</p>
         
         <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
         
-        <p style="font-size: 1.2rem; font-weight: 600;">Lic. Ariadna Ornella Salome Cariaga</p>
-        <p style="color: var(--terracota);">Psicopedagoga | M.P. 12-6475</p>
+        <div class="intro-box">
+            <p><strong>Mi trabajo consiste</strong> en asegurar que el proceso de aprendizaje no se detenga. Intervengo donde el proceso encuentra barreras, trabajando codo a codo con familias, instituciones escolares y otros profesionales para transformar la incertidumbre en una estrategia de evolución personal.</p>
+        </div>
+
+        <a href="https://wa.me/543541215892" class="btn-travesia">Comenzar la travesía</a>
         
-        <a href="https://wa.me/543541215892" class="btn-ws">Comenzar mi travesía</a>
+        <p style="font-weight: 600; font-size: 1.1rem;">Lic. Ariadna Ornella Salome Cariaga</p>
+        <p style="color: var(--terracota); font-weight: 600;">Psicopedagoga | M.P. 12-6475</p>
     </header>
 
     <div class="container">
         
-        <section>
-            <h2 class="section-title">Mi Abordaje</h2>
-            <div class="full-text-box">
-                <p>Mi trabajo consiste en asegurar que el proceso de aprendizaje no se detenga. Intervengo donde el proceso encuentra barreras, trabajando codo a codo con familias, instituciones escolares y otros profesionales para transformar la incertidumbre en una estrategia de evolución personal.</p>
-                <p>Me enfoco en brindar herramientas técnicas que funcionen como mapas reales para el desarrollo de la autonomía.</p>
+        <section id="servicios">
+            <h2 class="sec-title">Servicios Profesionales</h2>
+            <p class="atencion-tag">Atención Online y Presencial</p>
+
+            <div class="service-card">
+                <h3>📝 Evaluación Psicopedagógica</h3>
+                <p>Consiste en una instancia de valoración detallada para identificar el perfil de aprendizaje, detectando fortalezas y desafíos específicos mediante herramientas profesionales.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🔍 Diagnóstico Integral</h3>
+                <p>Consiste en un análisis profundo que integra la mirada clínica y neuropsicológica, fundamental para entender la raíz de las dificultades y trazar un plan de acción.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🌱 Tratamiento</h3>
+                <p>Consiste en el abordaje terapéutico continuo, donde trabajamos con estrategias personalizadas para potenciar la autonomía y el deseo de aprender.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🏫 Adecuaciones e Inclusión</h3>
+                <p>Acompañamiento escolar en la infancia, diseño de adecuaciones curriculares y mediación constante con instituciones educativas.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>👥 Adolescentes y Adultos</h3>
+                <p>Procesos de orientación, re-vinculación con el estudio y fortalecimiento de procesos cognitivos en etapas vitales de cambio.</p>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title">Servicios Profesionales</h2>
-            
-            <div class="full-text-box">
-                <h3>📚 Diagnóstico y Tratamiento</h3>
-                <p>Abordaje clínico de las dificultades del aprendizaje con especialización en neuropsicología. Realizo evaluaciones de procesos cognitivos y funciones ejecutivas.</p>
-                <p>Elaboro informes técnicos que funcionan como guías precisas para médicos, escuelas y familias, permitiendo una mirada integral del sujeto.</p>
-            </div>
-
-            <div class="full-text-box">
-                <h3>🤝 Inclusión Escolar</h3>
-                <p>Acompañamiento en trayectorias educativas mediante el diseño de adecuaciones curriculares personalizadas. Trabajo en la mediación interdisciplinaria para garantizar una escolaridad saludable y adaptada a la singularidad de cada estudiante.</p>
-            </div>
-
-            <div class="full-text-box">
-                <h3>🌱 Adultos y Adultos Mayores</h3>
-                <p>Talleres de estimulación cognitiva y fortalecimiento de la memoria. Estrategias de aprendizaje diseñadas para potenciar la autonomía y el desarrollo continuo en la vejez.</p>
+        <section id="abordaje">
+            <h2 class="sec-title">Mi Abordaje</h2>
+            <div class="grid-abordaje">
+                <div class="icon-box">
+                    <span>📑</span>
+                    <h4>Informe con Sentido</h4>
+                    <p>Brindo claridad mediante informes que funcionan como mapas reales para médicos, escuelas y familias.</p>
+                </div>
+                <div class="icon-box">
+                    <span>💡</span>
+                    <h4>Rediseño de Estrategias</h4>
+                    <p>Ajustamos cada paso del tratamiento según la evolución singular de cada trayecto.</p>
+                </div>
+                <div class="icon-box">
+                    <span>🤝</span>
+                    <h4>Visión de Inclusión Real</h4>
+                    <p>Buscamos que la inclusión no sea solo una palabra, sino una práctica efectiva en la vida diaria.</p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="full-text-box" style="border-left: 5px solid var(--terracota);">
-                <p>Soy <strong>Licenciada en Psicopedagogía</strong> egresada de la Universidad Provincial de Córdoba (UPC). Mi formación me ha permitido integrar la clínica con la neuropsicología, ofreciendo una mirada profunda y técnica del proceso de aprendizaje.</p>
-                <p>Mi pasión es acompañar a las personas en su travesía educativa y vital, brindando claridad donde hay dudas y herramientas donde hay desafíos.</p>
+        <section id="curso">
+            <div class="curso-container">
+                <h2>Escribir para Sanar</h2>
+                <span class="curso-tag">Cerrando las heridas de la infancia</span>
+                
+                <p style="text-align: center;">Un espacio diseñado para transformar el dolor en palabras y las palabras en puentes hacia la sanación personal.</p>
+                
+                <ul class="curso-list">
+                    <li><strong>Trabajo Personalizado:</strong> Respetando tus tiempos y tu historia.</li>
+                    <li><strong>Seguimiento por WhatsApp:</strong> Acompañamiento cercano durante todo el proceso.</li>
+                    <li><strong>Espacio de Comunicación y Revisión:</strong> Encuentros para integrar lo aprendido.</li>
+                </ul>
+
+                <a href="https://wa.me/543541215892?text=Hola%20Ariadna,%20quiero%20reservar%20mi%20lugar%20en%20el%20curso%20Escribir%20para%20Sanar" class="btn-reserva">Reservar mi lugar</a>
+                
+                <p class="nota-importante">Nota importante: Este es un espacio de cupos limitados para garantizar la calidad del seguimiento profesional.</p>
             </div>
         </section>
 
     </div>
 
-    <div class="footer-contact">
+    <div class="footer-main">
         <div class="container">
             <h2>Hablemos</h2>
-            <p>Villa Carlos Paz | Córdoba | Atención Online</p>
-            <p style="margin-top: 20px; font-weight: 600;">📱 +54 3541 215892</p>
-            <p style="font-weight: 600;">📧 lic.cariaga@gmail.com</p>
+            <p>Espacio de Comunicación y Encuentro</p>
+            
+            <div class="info-data">📱 <strong>+54 3541 215892</strong></div>
+            <div class="info-data">📧 <strong>lic.cariaga@gmail.com</strong></div>
+            
+            <p class="nota-importante">
+                Villa Carlos Paz | Córdoba | Argentina<br>
+                "Transformar la incertidumbre en una estrategia de evolución personal"
+            </p>
         </div>
     </div>
 
-    <footer>
+    <footer style="background: #1a1a1a; color: #666; text-align: center; padding: 25px; font-size: 0.8rem;">
         <p>© 2026 Travesía Psicopedagógica. Todos los derechos reservados.</p>
     </footer>
 
