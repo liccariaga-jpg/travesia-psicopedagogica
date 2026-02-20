@@ -15,36 +15,52 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; background-color: var(--crema); color: var(--texto); line-height: 1.6; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--crema);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        
+
         header { text-align: center; padding: 60px 20px; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); }
-        h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        h1 { font-size: 3.2rem; margin-bottom: 10px; }
         .quote { font-style: italic; color: var(--terracota); font-size: 1.3rem; margin-bottom: 30px; }
 
-        .profile-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 8px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
 
         section { padding: 40px 0; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+        .section-title { text-align: center; font-size: 2.3rem; margin-bottom: 30px; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--terracota); margin: 10px auto; }
 
-        /* Abordaje con Iconos */
-        .abordaje-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .abordaje-item { background: var(--blanco); padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-        .abordaje-item span { font-size: 3rem; display: block; margin-bottom: 15px; }
+        .full-text-box { background: var(--blanco); padding: 40px; border-radius: 25px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .full-text-box h3 { color: var(--terracota); margin-bottom: 15px; font-size: 1.7rem; }
+        .full-text-box p { margin-bottom: 15px; text-align: justify; }
 
-        /* Servicios */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: var(--blanco); padding: 30px; border-radius: 20px; border-top: 5px solid var(--verde-salvia); }
-        .card h3 { color: var(--terracota); margin-bottom: 10px; }
+        .btn-ws {
+            display: inline-block;
+            background-color: var(--terracota);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: 0.3s;
+        }
 
-        /* Lanzamiento Escribir para Sanar */
-        .lanzamiento { background: var(--verde-salvia); color: white; padding: 50px; border-radius: 30px; text-align: center; margin-top: 40px; }
-        .lanzamiento h2 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
-        .btn-ws { display: inline-block; background-color: var(--terracota); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 25px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-ws:hover { transform: scale(1.05); }
-
-        .footer-contact { text-align: center; padding: 60px 20px; }
+        .footer-contact { background-color: var(--verde-salvia); color: white; padding: 60px 20px; text-align: center; border-radius: 40px 40px 0 0; }
         footer { background: #222; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
     </style>
 </head>
@@ -53,63 +69,62 @@
     <header class="container">
         <h1>Travesía Psicopedagógica</h1>
         <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
+        
         <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
+        
         <p style="font-size: 1.2rem; font-weight: 600;">Lic. Ariadna Ornella Salome Cariaga</p>
-        <p style="color: var(--terracota);">M.P. 12-6475 | Psicopedagoga</p>
+        <p style="color: var(--terracota);">Psicopedagoga | M.P. 12-6475</p>
+        
+        <a href="https://wa.me/543541215892" class="btn-ws">Comenzar mi travesía</a>
     </header>
 
     <div class="container">
-        <section id="abordaje">
+        
+        <section>
             <h2 class="section-title">Mi Abordaje</h2>
-            <div class="abordaje-grid">
-                <div class="abordaje-item">
-                    <span>📝</span>
-                    <h3>Informes con sentido</h3>
-                    <p>Mapas reales que guían a familias, escuelas y médicos hacia soluciones concretas.</p>
-                </div>
-                <div class="abordaje-item">
-                    <span>🔄</span>
-                    <h3>Rediseño de estrategias</h3>
-                    <p>Transformamos la incertidumbre en planes de evolución personal y académica.</p>
-                </div>
-                <div class="abordaje-item">
-                    <span>🌍</span>
-                    <h3>Visión de inclusión real</h3>
-                    <p>Intervención en las barreras del aprendizaje para garantizar el derecho a aprender.</p>
-                </div>
+            <div class="full-text-box">
+                <p>Mi trabajo consiste en asegurar que el proceso de aprendizaje no se detenga. Intervengo donde el proceso encuentra barreras, trabajando codo a codo con familias, instituciones escolares y otros profesionales para transformar la incertidumbre en una estrategia de evolución personal.</p>
+                <p>Me enfoco en brindar herramientas técnicas que funcionen como mapas reales para el desarrollo de la autonomía.</p>
             </div>
         </section>
 
-        <section id="servicios">
+        <section>
             <h2 class="section-title">Servicios Profesionales</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🌐 Atención Online</h3>
-                    <p>Acompañamiento psicopedagógico clínico y neuropsicológico sin fronteras, desde la comodidad de tu hogar.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Adecuaciones</h3>
-                    <p>Especialista en inclusión escolar y diseño de trayectorias educativas diversificadas.</p>
-                </div>
-                <div class="card">
-                    <h3>🌱 Adultos Mayores</h3>
-                    <p>Estimulación cognitiva y talleres para potenciar la autonomía en el aprendizaje continuo.</p>
-                </div>
+            
+            <div class="full-text-box">
+                <h3>📚 Diagnóstico y Tratamiento</h3>
+                <p>Abordaje clínico de las dificultades del aprendizaje con especialización en neuropsicología. Realizo evaluaciones de procesos cognitivos y funciones ejecutivas.</p>
+                <p>Elaboro informes técnicos que funcionan como guías precisas para médicos, escuelas y familias, permitiendo una mirada integral del sujeto.</p>
+            </div>
+
+            <div class="full-text-box">
+                <h3>🤝 Inclusión Escolar</h3>
+                <p>Acompañamiento en trayectorias educativas mediante el diseño de adecuaciones curriculares personalizadas. Trabajo en la mediación interdisciplinaria para garantizar una escolaridad saludable y adaptada a la singularidad de cada estudiante.</p>
+            </div>
+
+            <div class="full-text-box">
+                <h3>🌱 Adultos y Adultos Mayores</h3>
+                <p>Talleres de estimulación cognitiva y fortalecimiento de la memoria. Estrategias de aprendizaje diseñadas para potenciar la autonomía y el desarrollo continuo en la vejez.</p>
             </div>
         </section>
 
-        <section class="lanzamiento">
-            <h2>ESCRIBIR PARA SANAR</h2>
-            <p>Un espacio terapéutico diseñado para transformar emociones en palabras y procesos de sanación a través de la escritura.</p>
-            <a href="https://wa.me/543541215892?text=Hola!%20Me%20interesa%20Escribir%20para%20Sanar" class="btn-ws">📩 Consultar Lanzamiento</a>
+        <section>
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="full-text-box" style="border-left: 5px solid var(--terracota);">
+                <p>Soy <strong>Licenciada en Psicopedagogía</strong> egresada de la Universidad Provincial de Córdoba (UPC). Mi formación me ha permitido integrar la clínica con la neuropsicología, ofreciendo una mirada profunda y técnica del proceso de aprendizaje.</p>
+                <p>Mi pasión es acompañar a las personas en su travesía educativa y vital, brindando claridad donde hay dudas y herramientas donde hay desafíos.</p>
+            </div>
         </section>
+
     </div>
 
     <div class="footer-contact">
-        <h2>Hablemos</h2>
-        <p>Villa Carlos Paz | Córdoba | Atención Online</p>
-        <p>📱 +54 3541 215892</p>
-        <p>📧 lic.cariaga@gmail.com</p>
+        <div class="container">
+            <h2>Hablemos</h2>
+            <p>Villa Carlos Paz | Córdoba | Atención Online</p>
+            <p style="margin-top: 20px; font-weight: 600;">📱 +54 3541 215892</p>
+            <p style="font-weight: 600;">📧 lic.cariaga@gmail.com</p>
+        </div>
     </div>
 
     <footer>
