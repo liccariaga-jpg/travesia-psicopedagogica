@@ -34,17 +34,6 @@ h1,h2,h3{
   background:var(--arena);
   padding:70px 20px;
   text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero svg{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  opacity:0.15;
 }
 
 .frase{
@@ -58,7 +47,7 @@ h1,h2,h3{
 }
 
 .intro{
-  max-width:750px;
+  max-width:780px;
   margin:0 auto;
 }
 
@@ -94,18 +83,6 @@ h1,h2,h3{
   border-radius:18px;
   padding:25px;
   margin-bottom:22px;
-  position:relative;
-}
-
-.card::before{
-  content:"";
-  width:6px;
-  height:100%;
-  background:var(--verde);
-  position:absolute;
-  left:0;
-  top:0;
-  border-radius:18px 0 0 18px;
 }
 
 .fondo{
@@ -114,40 +91,34 @@ h1,h2,h3{
 }
 
 .perfil{
-  width:170px;
+  width:180px;
   border-radius:50%;
   display:block;
   margin:30px auto;
-}
-
-.icono{
-  font-size:28px;
-  color:var(--verde);
-  margin-bottom:10px;
 }
 
 footer{
   background:#3b3b3b;
   color:white;
   text-align:center;
-  padding:35px 20px;
+  padding:40px 20px;
+  font-size:14px;
 }
 
-.contacto{
-  display:flex;
-  justify-content:center;
-  gap:30px;
+footer p{
+  margin:6px 0;
+}
+
+.legal{
+  font-size:13px;
+  opacity:.9;
   margin-top:15px;
-}
-
-.contacto a{
-  color:white;
-  text-decoration:none;
 }
 
 @media(max-width:600px){
   h1{font-size:28px}
   h2{font-size:22px}
+  .perfil{width:140px}
 }
 </style>
 </head>
@@ -155,25 +126,18 @@ footer{
 <body>
 
 <header class="hero">
-  <!-- Dibujo psicopedagógico: red de aprendizaje -->
-  <svg viewBox="0 0 800 400" preserveAspectRatio="none">
-    <circle cx="100" cy="200" r="6" fill="#6f8f6b"/>
-    <circle cx="250" cy="120" r="6" fill="#6f8f6b"/>
-    <circle cx="400" cy="220" r="6" fill="#6f8f6b"/>
-    <circle cx="550" cy="140" r="6" fill="#6f8f6b"/>
-    <circle cx="700" cy="230" r="6" fill="#6f8f6b"/>
-    <line x1="100" y1="200" x2="250" y2="120" stroke="#6f8f6b"/>
-    <line x1="250" y1="120" x2="400" y2="220" stroke="#6f8f6b"/>
-    <line x1="400" y1="220" x2="550" y2="140" stroke="#6f8f6b"/>
-    <line x1="550" y1="140" x2="700" y2="230" stroke="#6f8f6b"/>
-  </svg>
-
   <h1>Travesía Psicopedagógica</h1>
+
   <p class="frase">"El aprendizaje es el motor de la autonomía"</p>
-  <p class="nombre">Lic. Ariadna Ornella Salome Cariaga – Psicopedagoga</p>
+
+  <p class="nombre">
+    Lic. Ariadna Ornella Salomé Cariaga – Psicopedagoga
+  </p>
 
   <p class="intro">
-    Mi trabajo es asegurar que ese motor no se detenga. Intervengo allí donde el proceso de aprendizaje encuentra barreras, acompañando trayectorias educativas y vitales desde una perspectiva clínica, inclusiva y estratégica.
+    Mi trabajo es asegurar que ese motor no se detenga. Intervengo allí donde el proceso
+    de aprendizaje encuentra barreras, acompañando trayectorias educativas desde una
+    perspectiva clínica, inclusiva y comprometida.
   </p>
 
   <a class="btn" href="https://wa.me/543541215892" target="_blank">
@@ -188,42 +152,49 @@ footer{
   <div class="card">
     <h3>Evaluaciones Psicopedagógicas</h3>
     <p>
-      Evaluaciones clínicas integrales que permiten comprender cómo aprende cada persona. Elaboración de informes técnicos y clínicos que funcionan como mapas reales para familias, escuelas y profesionales de la salud.
+      Evaluaciones clínicas integrales orientadas a comprender los procesos de aprendizaje,
+      con elaboración de informes técnicos y clínicos que sirven como guía para familias,
+      instituciones educativas y profesionales de la salud.
     </p>
   </div>
 
   <div class="card">
     <h3>Diagnóstico Integral</h3>
     <p>
-      Abordaje profundo de dificultades del aprendizaje en niños, adolescentes y adultos, desde la neuropsicología del aprendizaje y el análisis de trayectorias educativas.
+      Abordaje de las dificultades del aprendizaje en niños, adolescentes y adultos,
+      desde una mirada psicopedagógica y neuropsicológica del aprendizaje.
     </p>
   </div>
 
   <div class="card">
     <h3>Tratamiento Psicopedagógico</h3>
     <p>
-      Intervenciones personalizadas orientadas a fortalecer procesos cognitivos, autonomía académica y proyectos de vida, respetando tiempos y singularidades.
+      Intervenciones personalizadas que apuntan al fortalecimiento de los procesos
+      cognitivos, la autonomía y el desarrollo de estrategias de aprendizaje.
     </p>
   </div>
 
   <div class="card">
     <h3>Adecuaciones Curriculares</h3>
     <p>
-      Diseño de planes de intervención y adecuaciones curriculares que posibilitan la inclusión real, priorizando la participación activa y el acceso significativo a los aprendizajes.
+      Diseño de adecuaciones curriculares y planes de intervención que favorecen
+      la inclusión real y el acceso significativo a los aprendizajes.
     </p>
   </div>
 
   <div class="card">
     <h3>Acompañamiento Escolar</h3>
     <p>
-      Trabajo articulado con familias e instituciones educativas para sostener trayectorias escolares, favorecer la inclusión y construir estrategias viables dentro del aula.
+      Trabajo articulado con familias e instituciones educativas, promoviendo
+      trayectorias escolares sostenidas e inclusivas.
     </p>
   </div>
 
   <div class="card">
     <h3>Adultos y Adultos Mayores</h3>
     <p>
-      Acompañamiento en procesos de aprendizaje, fortalecimiento cognitivo y alto rendimiento, entendiendo el aprendizaje como un proceso continuo a lo largo de la vida.
+      Acompañamiento en procesos de aprendizaje, fortalecimiento cognitivo
+      y desarrollo personal a lo largo de toda la vida.
     </p>
   </div>
 </section>
@@ -232,44 +203,34 @@ footer{
   <h2>Mi Abordaje</h2>
 
   <div class="card">
-    <h3>Informes con Sentido</h3>
+    <h3>Informes con sentido</h3>
     <p>
-      No elaboro diagnósticos para ser archivados. Cada informe es una herramienta viva que orienta decisiones clínicas, educativas y familiares.
+      No elaboro diagnósticos para ser archivados. Cada informe tiene una función
+      orientadora y operativa en el recorrido educativo y vital.
     </p>
   </div>
 
   <div class="card">
-    <h3>Rediseño de Estrategias</h3>
+    <h3>Rediseño de estrategias</h3>
     <p>
-      Traduzco la complejidad clínica en acciones concretas, funcionales y aplicables a la vida cotidiana y escolar.
+      Traduzco la complejidad clínica en estrategias claras y posibles,
+      aplicables a la vida cotidiana y escolar.
     </p>
   </div>
 
   <div class="card">
-    <h3>Visión de Inclusión Real</h3>
+    <h3>Inclusión real</h3>
     <p>
-      La inclusión no es un discurso, es una práctica situada. Trabajo para que cada estudiante participe, aprenda y se desarrolle desde sus posibilidades reales.
+      La inclusión no es un concepto abstracto, sino una práctica concreta
+      que se construye día a día en cada contexto.
     </p>
   </div>
 </section>
 
 <section class="seccion">
   <h2>Sobre mí</h2>
-  <img src="perfil.jpg" class="perfil">
+
+  <img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga" class="perfil">
+
   <p>
-    Soy Licenciada en Psicopedagogía, egresada de la Universidad Provincial de Córdoba (UPC). Mi formación y práctica se centran en el diagnóstico, la intervención clínica y el acompañamiento de trayectorias educativas desde una mirada integral, ética y comprometida.
-  </p>
-</section>
-
-<footer>
-  <p><strong>Lic. Ariadna Ornella Salome Cariaga</strong></p>
-  <p>MP P 12-6475 – Córdoba, Argentina</p>
-
-  <div class="contacto">
-    <a href="https://wa.me/543541215892" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    <a href="mailto:lic.cariaga@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-  </div>
-</footer>
-
-</body>
-</html>
+    Soy Licenciada en Psicopedagogía, egresada de la Universidad Provincial de Córdoba (UPC
