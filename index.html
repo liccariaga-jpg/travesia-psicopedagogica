@@ -70,6 +70,7 @@ font-weight:600;
 font-size:0.95rem;
 }
 
+/* ---------- GENERAL ---------- */
 section{
 max-width:1100px;
 margin:auto;
@@ -86,6 +87,17 @@ text-align:center;
 font-size:2.8rem;
 color:var(--verde);
 margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+background:var(--terracota);
+color:white;
+padding:16px 42px;
+border-radius:30px;
+text-decoration:none;
+font-weight:700;
+margin-top:30px;
 }
 
 /* ---------- HERO ---------- */
@@ -118,20 +130,9 @@ margin-bottom:20px;
 }
 
 .hero p{
-max-width:750px;
+max-width:760px;
 margin:0 auto;
 font-size:1.2rem;
-}
-
-.btn{
-display:inline-block;
-background:var(--terracota);
-color:white;
-padding:16px 42px;
-border-radius:30px;
-text-decoration:none;
-font-weight:700;
-margin-top:35px;
 }
 
 /* ---------- SERVICIOS ---------- */
@@ -202,6 +203,12 @@ font-size:0.9rem;
 margin-bottom:25px;
 }
 
+.curso h3{
+font-size:2.4rem;
+color:var(--terracota);
+margin-bottom:25px;
+}
+
 .curso ul{
 list-style:none;
 margin:25px 0;
@@ -210,6 +217,16 @@ margin:25px 0;
 .curso li{
 margin-bottom:10px;
 font-weight:600;
+}
+
+.nota-importante{
+background:#f1f1f1;
+margin-top:35px;
+padding:28px;
+border-radius:15px;
+font-size:0.95rem;
+text-align:left;
+border-left:5px solid var(--verde);
 }
 
 /* ---------- SOBRE MI ---------- */
@@ -280,7 +297,6 @@ margin-top:15px;
 <ul class="nav-links">
 <li><a href="#servicios">Servicios</a></li>
 <li><a href="#abordaje">Abordaje</a></li>
-<li><a href="#propuesta">Propuesta</a></li>
 <li><a href="#curso">Curso</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
@@ -328,7 +344,9 @@ Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso 
 <div class="curso">
 <span class="tag">PRIMER LANZAMIENTO</span>
 <h3>Escribir para sanar</h3>
+
 <p>Herramientas de escritura para el bienestar emocional.</p>
+<p><em>“Sanando las heridas de la infancia y fortaleciendo tu presente”</em></p>
 
 <ul>
 <li>✔ Trabajo personalizado</li>
@@ -336,25 +354,11 @@ Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso 
 <li>✔ Espacio de covisión</li>
 </ul>
 
-<a class="btn" href="https://wa.me/543541215892">Reservar mi lugar</a>
-</div>
-</section>
+<a class="btn" href="https://wa.me/543541215892" target="_blank">Reservar mi lugar</a>
 
-<section id="propuesta">
-<h2>Sobre mí</h2>
-<div class="sobre-mi">
-<p>
-Licenciada en Psicopedagogía egresada de la Facultad de Educación y Salud – Universidad Provincial de Córdoba (FES-UPC), con especialización en neuropsicología del aprendizaje y estrategias de inclusión escolar.
-</p>
-
-<div class="caja-credenciales">
-<ul>
-<li>Matrícula profesional MP P 126575</li>
-<li>Licenciada en Psicopedagogía – FES-UPC</li>
-<li>Especialización en Neuropsicología del Aprendizaje</li>
-<li>Formación en Estrategias de Inclusión Escolar</li>
-<li>Experiencia en abordaje clínico interdisciplinario</li>
-</ul>
+<div class="nota-importante">
+<strong>Nota importante:</strong><br><br>
+Esta actividad de formación ofrece estrategias de escritura creativa y reflexiva como herramientas de autoconocimiento y procesamiento emocional desde un enfoque psicopedagógico. No constituye tratamiento psicoterapéutico ni reemplaza la atención médica o psicológica profesional. Dirigido a público general interesado en explorar el vínculo entre escritura y bienestar emocional.
 </div>
 </div>
 </section>
@@ -370,7 +374,9 @@ Licenciada en Psicopedagogía egresada de la Facultad de Educación y Salud – 
 <footer>
 <p><strong>Travesía Psicopedagógica</strong></p>
 <p>Lic. Ariadna Ornella Salomé Cariaga | MP P 126475</p>
-<p>Ejercicio profesional regulado por la Ley 7619 de la Provincia de Córdoba</p>
+<div class="ley">
+Ejercicio profesional regulado por la Ley 7619 de la Provincia de Córdoba
+</div>
 </footer>
 
 </body>
