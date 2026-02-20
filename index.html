@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travesía Psicopedagógica | Lic. Ariadna Cariaga</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --verde-salvia: #7A967C;
@@ -21,112 +21,142 @@
             background-color: var(--crema);
             color: var(--texto);
             line-height: 1.6;
-            text-align: center;
         }
 
-        /* Hero Section */
-        .hero { padding: 60px 20px; background: linear-gradient(to bottom, #fff, var(--crema)); }
-        
-        h1 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); font-size: 2.5rem; margin-bottom: 10px; }
-        
-        .quote { font-style: italic; color: var(--terracota); margin-bottom: 30px; font-size: 1.2rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
+        /* Cabecera / Hero */
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(to bottom, #fff, var(--crema)); }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); }
+        h1 { font-size: 3.2rem; margin-bottom: 10px; }
+        .quote { font-style: italic; color: var(--terracota); font-size: 1.3rem; margin-bottom: 40px; }
+
+        .profile-container { text-align: center; margin-bottom: 30px; }
         .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%; /* Foto circular como en tu diseño */
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 5px solid var(--blanco);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .btn {
+        /* Secciones */
+        section { padding: 50px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 35px; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--terracota); margin: 10px auto; }
+
+        /* Tarjetas de Servicios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card {
+            background: var(--blanco);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-bottom: 4px solid transparent;
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); border-bottom: 4px solid var(--verde-salvia); }
+        .card h3 { color: var(--terracota); margin-bottom: 15px; font-size: 1.6rem; }
+
+        /* Bloques de Texto */
+        .info-box { background: var(--blanco); padding: 40px; border-radius: 30px; margin-top: 20px; border-left: 5px solid var(--verde-salvia); }
+
+        /* Botón de Acción */
+        .btn-ws {
             display: inline-block;
             background-color: var(--terracota);
             color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 18px 45px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
+            font-weight: 600;
+            margin-top: 20px;
             transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(198, 124, 92, 0.3);
         }
+        .btn-ws:hover { background-color: #a86548; transform: scale(1.05); }
 
-        /* Tarjetas de Servicios */
-        .services { padding: 40px 20px; }
-        .card {
-            background: var(--blanco);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .card h3 { color: var(--terracota); margin-bottom: 10px; font-family: 'Cormorant Garamond', serif; }
-
-        /* Footer / Contacto */
-        .contact { background-color: var(--verde-salvia); color: white; padding: 50px 20px; }
-        .contact h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 20px; }
-        .contact-box { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 15px; max-width: 400px; margin-inline: auto; }
+        /* Contacto Final */
+        .footer-contact { background-color: var(--verde-salvia); color: white; padding: 70px 20px; text-align: center; border-radius: 50px 50px 0 0; }
+        .footer-contact h2 { color: white; }
+        .contact-item { margin: 15px 0; font-size: 1.2rem; font-weight: 300; }
         
-        footer { background: #333; color: #ccc; padding: 20px; font-size: 0.8rem; }
+        footer { background: #222; color: #888; text-align: center; padding: 25px; font-size: 0.85rem; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .profile-img { width: 200px; height: 200px; }
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>Travesía Psicopedagógica</h1>
-        <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
-        
-        <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
-        
-        <p style="max-width: 600px; margin: 0 auto;">Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso de aprendizaje encuentra barreras.</p>
-        
-        <a href="https://wa.me/543541215892" class="btn">Comenzar mi travesía</a>
-        
-        <p style="font-size: 0.9rem; color: #888;">Lic. Ariadna Ornella Salome Cariaga | MP P 12-6475<br>Córdoba, Argentina</p>
-    </section>
+    <header>
+        <div class="container">
+            <h1>Travesía Psicopedagógica</h1>
+            <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
+            
+            <div class="profile-container">
+                <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
+            </div>
 
-    <section class="services">
-        <h2 style="font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); font-size: 2rem; margin-bottom: 30px;">Servicios Profesionales</h2>
-        
-        <div class="card">
-            <h3>📚 Adecuaciones Curriculares</h3>
-            <p>Diseño de planes de intervención adaptados a cada perfil, potenciando la autonomía del estudiante.</p>
+            <p style="font-size: 1.2rem; font-weight: 600;">Lic. Ariadna Ornella Salome Cariaga</p>
+            <p style="color: var(--terracota); margin-bottom: 25px;">Psicopedagoga | M.P. 12-6475</p>
+            
+            <a href="https://wa.me/543541215892" class="btn-ws">Comenzar mi travesía</a>
         </div>
+    </header>
 
-        <div class="card">
-            <h3>🤝 Acompañamiento Escolar</h3>
-            <p>Trabajo interdisciplinario con familias y equipos docentes para una inclusión real.</p>
-        </div>
-
-        <div class="card">
-            <h3>🌱 Adultos y Adultos Mayores</h3>
-            <p>Fortalecimiento cognitivo y estrategias de aprendizaje para el desarrollo continuo.</p>
-        </div>
-    </section>
-
-    <section class="contact">
-        <h2>Hablemos</h2>
-        <p style="margin-bottom: 30px;">Si buscás transformar la incertidumbre en una estrategia de evolución personal, estoy aquí para acompañarte.</p>
+    <div class="container">
         
-        <div class="contact-box">
-            <p>📱 WhatsApp</p>
-            <strong>+54 3541 215892</strong>
+        <section id="servicios">
+            <h2 class="section-title">Servicios Profesionales</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📚 Inclusión Escolar</h3>
+                    <p>Diseño de adecuaciones curriculares y acompañamiento interdisciplinario para trayectorias escolares diversas.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Neuropsicología</h3>
+                    <p>Evaluación de funciones ejecutivas y procesos cognitivos aplicados al aprendizaje clínico.</p>
+                </div>
+                <div class="card">
+                    <h3>🌱 Adultos Mayores</h3>
+                    <p>Talleres de estimulación cognitiva y estrategias para mantener la autonomía en el aprendizaje vital.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="abordaje">
+            <h2 class="section-title">Mi Abordaje</h2>
+            <div class="info-box">
+                <p>Intervengo donde el proceso de aprendizaje encuentra barreras. Mi objetivo es transformar la incertidumbre de las familias y escuelas en una estrategia clara de evolución personal, trabajando siempre desde la empatía y la técnica profesional.</p>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="info-box">
+                <p>Egresada de la <strong>Universidad Provincial de Córdoba (UPC)</strong>. Mi recorrido profesional se centra en brindar mapas reales de aprendizaje a través de informes diagnósticos precisos y una mirada integral del sujeto.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="footer-contact">
+        <div class="container">
+            <h2>Hablemos</h2>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Estoy aquí para acompañar tu proceso o el de tu familia.</p>
+            <div class="contact-item">📱 WhatsApp: +54 3541 215892</div>
+            <div class="contact-item">📧 Email: lic.cariaga@gmail.com</div>
+            <div class="contact-item">📍 Villa Carlos Paz | Atención Online</div>
         </div>
-        
-        <div class="contact-box">
-            <p>📧 Email</p>
-            <strong>lic.cariaga@gmail.com</strong>
-        </div>
-    </section>
+    </div>
 
     <footer>
-        <p>Travesía Psicopedagógica - 2026</p>
-        <p>Atención Online | Córdoba, Argentina</p>
+        <p>© 2026 Travesía Psicopedagógica. Todos los derechos reservados.</p>
+        <p>Diseño Profesional para Salud y Educación</p>
     </footer>
 
 </body>
