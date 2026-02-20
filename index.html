@@ -10,7 +10,7 @@
             --verde-salvia: #7A967C;
             --terracota: #C67C5C;
             --crema: #F9F7F2;
-            --texto: #4A4A4A;
+            --texto: #3D3D3D;
             --blanco: #FFFFFF;
         }
 
@@ -25,153 +25,118 @@
 
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
-        /* Encabezado */
-        header { text-align: center; padding: 80px 20px 40px; background: linear-gradient(to bottom, #fff, var(--crema)); }
+        header { text-align: center; padding: 60px 20px; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); }
-        h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        .quote { font-style: italic; color: var(--terracota); font-size: 1.4rem; margin-bottom: 40px; }
+        h1 { font-size: 3.2rem; margin-bottom: 10px; line-height: 1.1; }
+        .quote { font-style: italic; color: var(--terracota); font-size: 1.3rem; margin-bottom: 30px; }
 
-        .profile-container { text-align: center; margin-bottom: 30px; }
         .profile-img {
-            width: 250px;
-            height: 250px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             object-fit: cover;
             border: 8px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
-        /* Secciones */
-        section { padding: 60px 0; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--terracota); margin: 15px auto; }
+        section { padding: 40px 0; }
+        .section-title { text-align: center; font-size: 2.3rem; margin-bottom: 30px; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--terracota); margin: 10px auto; }
 
-        /* Mi Abordaje */
-        .highlight-box {
-            background: var(--blanco);
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            text-align: center;
-            font-size: 1.1rem;
-            border-top: 5px solid var(--verde-salvia);
-        }
-
-        /* Grilla de Servicios */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        /* Tarjetas con TODO el contenido */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .card {
             background: var(--blanco);
-            padding: 35px;
+            padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            transition: 0.3s;
-            height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--verde-salvia);
         }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--terracota); margin-bottom: 15px; font-size: 1.6rem; }
+        .card h3 { color: var(--terracota); margin-bottom: 12px; font-size: 1.6rem; }
 
-        /* Botón WhatsApp */
+        /* Bloques de texto completo */
+        .full-text { background: var(--blanco); padding: 35px; border-radius: 25px; margin-bottom: 20px; }
+        .full-text p { margin-bottom: 15px; }
+
         .btn-ws {
             display: inline-block;
             background-color: var(--terracota);
             color: white;
-            padding: 20px 50px;
+            padding: 18px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 30px;
+            margin: 20px 0;
             transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(198, 124, 92, 0.4);
         }
-        .btn-ws:hover { background-color: #a86548; transform: scale(1.05); }
+        .btn-ws:hover { transform: scale(1.05); background-color: #a86548; }
 
-        /* Contacto */
-        .contact-section { 
-            background-color: var(--verde-salvia); 
-            color: white; 
-            padding: 80px 20px; 
-            text-align: center; 
-            border-radius: 60px 60px 0 0; 
-            margin-top: 40px;
-        }
-        .contact-section h2 { color: white; margin-bottom: 30px; }
-        .contact-info { font-size: 1.2rem; margin: 10px 0; font-weight: 300; }
-        
-        footer { background: #222; color: #777; text-align: center; padding: 30px; font-size: 0.8rem; }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .profile-img { width: 200px; height: 200px; }
-        }
+        .footer-contact { background-color: var(--verde-salvia); color: white; padding: 60px 20px; text-align: center; border-radius: 40px 40px 0 0; }
+        footer { background: #222; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Travesía Psicopedagógica</h1>
-            <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
-            
-            <div class="profile-container">
-                <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
-            </div>
-
-            <p style="font-size: 1.3rem; font-weight: 600; color: var(--texto);">Lic. Ariadna Ornella Salome Cariaga</p>
-            <p style="color: var(--terracota); font-weight: 400; margin-bottom: 30px;">Psicopedagoga | M.P. 12-6475</p>
-            
-            <a href="https://wa.me/543541215892" class="btn-ws">Comenzar mi travesía</a>
-        </div>
+    <header class="container">
+        <h1>Travesía Psicopedagógica</h1>
+        <p class="quote">"El aprendizaje es el motor de la autonomía"</p>
+        
+        <img src="foto-perfil.jpg" alt="Lic. Ariadna Cariaga" class="profile-img">
+        
+        <p style="font-size: 1.2rem; font-weight: 600;">Lic. Ariadna Ornella Salome Cariaga</p>
+        <p style="color: var(--terracota);">Psicopedagoga | M.P. 12-6475</p>
+        
+        <a href="https://wa.me/543541215892" class="btn-ws">Comenzar mi travesía</a>
     </header>
 
     <div class="container">
-        
-        <section id="abordaje">
+        <section>
             <h2 class="section-title">Mi Abordaje</h2>
-            <div class="highlight-box">
-                <p>Mi trabajo consiste en asegurar que el proceso de aprendizaje no se detenga. Intervengo donde el proceso encuentra barreras, trabajando codo a codo con familias, instituciones escolares y otros profesionales para transformar la incertidumbre en una estrategia clara de evolución personal.</p>
+            <div class="full-text">
+                <p>Mi trabajo consiste en asegurar que el proceso de aprendizaje no se detenga. Intervengo donde el proceso encuentra barreras, trabajando codo a codo con familias, instituciones escolares y otros profesionales.</p>
+                <p>Busco transformar la incertidumbre en una estrategia clara de evolución personal, brindando herramientas técnicas que funcionen como mapas reales para el desarrollo de la autonomía.</p>
             </div>
         </section>
 
-        <section id="servicios">
+        <section>
             <h2 class="section-title">Servicios Profesionales</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>📚 Adecuaciones Curriculares</h3>
-                    <p>Diseño de planes de intervención personalizados para garantizar una inclusión escolar real, adaptada a la singularidad de cada estudiante.</p>
+                    <h3>📚 Diagnóstico y Tratamiento</h3>
+                    <p>Abordaje clínico de las dificultades del aprendizaje con especialización en neuropsicología. Evaluación de funciones ejecutivas y procesos cognitivos.</p>
                 </div>
                 <div class="card">
-                    <h3>🤝 Acompañamiento Escolar</h3>
-                    <p>Trabajo interdisciplinario y mediación entre familia y escuela para favorecer trayectorias educativas saludables.</p>
+                    <h3>🤝 Inclusión Escolar</h3>
+                    <p>Diseño de adecuaciones curriculares y acompañamiento en el aula. Mediación interdisciplinaria para garantizar una escolaridad saludable.</p>
                 </div>
                 <div class="card">
-                    <h3>🌱 Adultos y Adultos Mayores</h3>
-                    <p>Fortalecimiento cognitivo y estimulación de funciones ejecutivas para potenciar la autonomía en todas las etapas de la vida.</p>
+                    <h3>🌱 Adultos Mayores</h3>
+                    <p>Fortalecimiento cognitivo, talleres de memoria y estrategias de aprendizaje vital para potenciar la autonomía en la vejez.</p>
                 </div>
             </div>
         </section>
 
-        <section id="sobre-mi">
+        <section>
             <h2 class="section-title">Sobre mí</h2>
-            <div class="highlight-box" style="border-top: none; border-left: 5px solid var(--terracota); text-align: left;">
-                <p>Soy <strong>Licenciada en Psicopedagogía</strong> egresada de la Universidad Provincial de Córdoba (UPC). Mi formación se orienta a la clínica y a la neuropsicología, con el objetivo de brindar informes técnicos que funcionen como mapas reales para el desarrollo de cada sujeto.</p>
+            <div class="full-text" style="border-left: 5px solid var(--terracota);">
+                <p>Soy <strong>Licenciada en Psicopedagogía</strong> egresada de la Universidad Provincial de Córdoba (UPC). Mi formación me permite integrar la clínica con la neuropsicología, ofreciendo una mirada integral del sujeto.</p>
+                <p>Me especializo en la elaboración de informes diagnósticos precisos que sirven de guía para familias, escuelas y equipos médicos.</p>
             </div>
         </section>
-
     </div>
 
-    <div class="contact-section">
+    <div class="footer-contact">
         <div class="container">
             <h2>Hablemos</h2>
-            <p style="margin-bottom: 40px; opacity: 0.9;">Si buscas acompañamiento profesional para transformar el proceso de aprendizaje, estoy aquí.</p>
-            <div class="contact-info">📱 WhatsApp: +54 3541 215892</div>
-            <div class="contact-info">📧 Email: lic.cariaga@gmail.com</div>
-            <div class="contact-info">📍 Córdoba, Argentina | Atención Online</div>
+            <p>Villa Carlos Paz | Córdoba | Atención Online</p>
+            <p style="margin-top: 20px;">📱 +54 3541 215892</p>
+            <p>📧 lic.cariaga@gmail.com</p>
         </div>
     </div>
 
     <footer>
         <p>© 2026 Travesía Psicopedagógica. Todos los derechos reservados.</p>
-        <p>Potenciando la autonomía a través del aprendizaje.</p>
     </footer>
 
 </body>
