@@ -95,9 +95,15 @@ width:230px;
 height:230px;
 border-radius:50%;
 object-fit:cover;
-margin:30px auto;
+margin:30px auto 15px;
 border:6px solid var(--blanco);
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.foto-info{
+font-size:0.9rem;
+color:#555;
+margin-bottom:25px;
 }
 
 .btn{
@@ -109,13 +115,6 @@ border-radius:30px;
 text-decoration:none;
 font-weight:600;
 margin-top:25px;
-}
-
-.matricula{
-display:block;
-margin-top:15px;
-font-size:0.9rem;
-color:#666;
 }
 
 section{
@@ -166,16 +165,55 @@ padding:25px;
 }
 
 .pilar span{
-font-size:2.8rem;
+font-size:2.6rem;
 display:block;
 margin-bottom:15px;
+}
+
+.curso{
+background:white;
+border-radius:20px;
+padding:60px 30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
+text-align:center;
+border:2px solid var(--beige);
+}
+
+.curso .tag{
+display:inline-block;
+background:var(--verde);
+color:white;
+padding:6px 16px;
+border-radius:20px;
+font-size:0.8rem;
+margin-bottom:20px;
+}
+
+.curso h3{
+font-size:2rem;
+color:var(--terracota);
+margin-bottom:20px;
+}
+
+.curso p{
+max-width:650px;
+margin:0 auto 20px;
+}
+
+.disclaimer{
+background:#f0f0f0;
+padding:20px;
+border-radius:10px;
+font-size:0.85rem;
+text-align:left;
+margin-top:30px;
+border-left:4px solid var(--verde);
 }
 
 .sobre-mi{
 display:grid;
 grid-template-columns:1fr 2fr;
 gap:40px;
-align-items:start;
 }
 
 .sobre-mi img{
@@ -243,6 +281,7 @@ margin-top:15px;
 <ul class="nav-links">
 <li><a href="#servicios">Servicios</a></li>
 <li><a href="#abordaje">Abordaje</a></li>
+<li><a href="#curso">Curso</a></li>
 <li><a href="#sobre">Sobre mí</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
@@ -253,58 +292,54 @@ margin-top:15px;
 <h1>Travesía Psicopedagógica</h1>
 <p class="tagline">“El aprendizaje es el motor de la autonomía”</p>
 
-<img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga">
+<img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga – Psicopedagoga">
+<div class="foto-info">
+Lic. Ariadna Ornella Salomé Cariaga<br>
+Matrícula Profesional MP P 126475 – Provincia de Córdoba
+</div>
 
 <p>
-Acompaño procesos de aprendizaje cuando aparecen barreras, construyendo estrategias claras, respetuosas y sostenidas en el tiempo, desde una mirada clínica e inclusiva.
+Acompaño procesos de aprendizaje cuando aparecen barreras, desde una mirada clínica, inclusiva y respetuosa de cada trayectoria.
 </p>
 
 <a class="btn" href="https://wa.me/543541215892" target="_blank">Comenzar la travesía</a>
-
-<span class="matricula">
-Lic. Ariadna Ornella Salomé Cariaga | MP P 126475
-</span>
 </section>
 
 <section id="servicios">
 <h2>Servicios Profesionales</h2>
 <div class="servicios">
-<div class="card">
-<h3>Evaluaciones psicopedagógicas</h3>
-<p>Elaboración de informes claros, clínicos y funcionales, que orientan decisiones educativas, médicas y familiares.</p>
-</div>
-<div class="card">
-<h3>Tratamiento psicopedagógico</h3>
-<p>Intervenciones personalizadas en niños, adolescentes y adultos, respetando singularidades y tiempos de cada proceso.</p>
-</div>
-<div class="card">
-<h3>Acompañamiento e inclusión escolar</h3>
-<p>Trabajo articulado con instituciones y familias para favorecer trayectorias educativas posibles.</p>
-</div>
-<div class="card">
-<h3>Adecuaciones curriculares</h3>
-<p>Diseño de estrategias pedagógicas que promueven autonomía y participación real.</p>
-</div>
+<div class="card"><h3>Evaluaciones psicopedagógicas</h3><p>Informes clínicos claros y funcionales.</p></div>
+<div class="card"><h3>Tratamiento psicopedagógico</h3><p>Intervenciones personalizadas en todas las etapas de la vida.</p></div>
+<div class="card"><h3>Acompañamiento e inclusión escolar</h3><p>Trabajo articulado con escuelas y familias.</p></div>
+<div class="card"><h3>Adecuaciones curriculares</h3><p>Diseño de estrategias pedagógicas inclusivas.</p></div>
 </div>
 </section>
 
 <section class="metodologia" id="abordaje">
 <h2>Mi abordaje</h2>
 <div class="pilares">
-<div class="pilar">
-<span>🧠</span>
-<h3>Mirada integral</h3>
-<p>Considero al sujeto en su contexto, su historia y su forma singular de aprender.</p>
+<div class="pilar"><span>🧠</span><p>Mirada integral del sujeto y su contexto.</p></div>
+<div class="pilar"><span>📄</span><p>Diagnósticos como herramientas, no etiquetas.</p></div>
+<div class="pilar"><span>🌱</span><p>Inclusión real y cotidiana.</p></div>
 </div>
-<div class="pilar">
-<span>📄</span>
-<h3>Informes con sentido</h3>
-<p>Los diagnósticos son herramientas para intervenir, no etiquetas.</p>
-</div>
-<div class="pilar">
-<span>🌱</span>
-<h3>Inclusión real</h3>
-<p>La inclusión se construye en lo cotidiano, con acciones concretas.</p>
+</section>
+
+<section id="curso">
+<h2>Propuesta de formación</h2>
+<div class="curso">
+<span class="tag">PRIMER LANZAMIENTO</span>
+<h3>Escribir para sanar</h3>
+<p>
+Espacio de escritura reflexiva y creativa como herramienta de bienestar emocional,
+orientado al autoconocimiento y la elaboración subjetiva.
+</p>
+<p><em>“Sanando las heridas de la infancia y fortaleciendo tu presente”</em></p>
+
+<a class="btn" href="https://wa.me/543541215892" target="_blank">Consultar disponibilidad</a>
+
+<div class="disclaimer">
+Esta propuesta no constituye tratamiento psicoterapéutico ni reemplaza atención médica o psicológica.
+Se ofrece como espacio de acompañamiento psicopedagógico y escritura personal.
 </div>
 </div>
 </section>
@@ -315,14 +350,11 @@ Lic. Ariadna Ornella Salomé Cariaga | MP P 126475
 <img src="perfil.jpg" alt="Lic. Ariadna Cariaga">
 <div>
 <p>Soy Licenciada en Psicopedagogía, con experiencia clínica y escolar en el acompañamiento de trayectorias educativas diversas.</p>
-<p>Trabajo desde una perspectiva ética, comprometida y actualizada, priorizando el bienestar y la autonomía de cada persona.</p>
-
 <div class="credenciales">
 <ul>
 <li>Licenciada en Psicopedagogía</li>
-<li>Matrícula Profesional MP P 126475</li>
-<li>Formación en inclusión escolar</li>
-<li>Elaboración de informes clínicos</li>
+<li>Matrícula MP P 126475</li>
+<li>Intervenciones clínicas e inclusivas</li>
 </ul>
 </div>
 </div>
@@ -334,7 +366,7 @@ Lic. Ariadna Ornella Salomé Cariaga | MP P 126475
 <p>Atención online</p>
 <p>
 <a href="mailto:lic.cariaga@gmail.com">lic.cariaga@gmail.com</a><br>
-<a href="https://wa.me/543541215892" target="_blank">+54 3541 215892</a>
+<a href="https://wa.me/543541215892">+54 3541 215892</a>
 </p>
 </section>
 
