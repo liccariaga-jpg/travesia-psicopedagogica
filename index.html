@@ -29,17 +29,14 @@ line-height:1.8;
 font-size:18px;
 }
 
-h1,h2,h3{
-font-family:'Cormorant Garamond',serif;
-}
-
+/* ---------- NAV ---------- */
 nav{
 position:fixed;
 top:0;
 width:100%;
 background:rgba(255,255,255,0.95);
 z-index:1000;
-padding:18px 0;
+padding:16px 0;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -53,17 +50,49 @@ align-items:center;
 }
 
 .logo{
-font-size:1.8rem;
+font-family:'Cormorant Garamond',serif;
+font-size:1.9rem;
 font-weight:700;
 color:var(--verde);
 text-decoration:none;
 }
 
-.hero{
-margin-top:90px;
+.nav-links{
+list-style:none;
+display:flex;
+gap:28px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--texto);
+font-weight:600;
+font-size:0.95rem;
+}
+
+section{
+max-width:1100px;
+margin:auto;
 padding:100px 20px;
-background:linear-gradient(135deg,var(--beige),var(--crema));
+scroll-margin-top:100px;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+h2{
 text-align:center;
+font-size:2.8rem;
+color:var(--verde);
+margin-bottom:25px;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+margin-top:100px;
+text-align:center;
+background:linear-gradient(135deg,var(--beige),var(--crema));
 }
 
 .hero h1{
@@ -71,11 +100,11 @@ font-size:3.4rem;
 color:var(--verde);
 }
 
-.hero .tagline{
+.tagline{
 font-style:italic;
 color:var(--terracota);
-margin:20px 0 25px;
 font-size:1.5rem;
+margin:20px 0 30px;
 }
 
 .hero img{
@@ -83,15 +112,9 @@ width:240px;
 height:240px;
 border-radius:50%;
 object-fit:cover;
-margin:35px auto 20px;
 border:6px solid var(--blanco);
 box-shadow:0 10px 30px rgba(0,0,0,0.18);
-}
-
-.foto-info{
-font-size:1rem;
-color:#555;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .hero p{
@@ -111,19 +134,7 @@ font-weight:700;
 margin-top:35px;
 }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:90px 20px;
-}
-
-section h2{
-text-align:center;
-font-size:2.8rem;
-color:var(--verde);
-margin-bottom:25px;
-}
-
+/* ---------- SERVICIOS ---------- */
 .subtitulo{
 text-align:center;
 font-weight:600;
@@ -149,6 +160,7 @@ margin-bottom:15px;
 font-size:1.5rem;
 }
 
+/* ---------- ABORDAJE ---------- */
 .metodologia{
 background:var(--beige);
 }
@@ -170,6 +182,7 @@ display:block;
 margin-bottom:18px;
 }
 
+/* ---------- CURSO ---------- */
 .curso{
 background:white;
 border-radius:22px;
@@ -189,12 +202,6 @@ font-size:0.9rem;
 margin-bottom:25px;
 }
 
-.curso h3{
-font-size:2.4rem;
-color:var(--terracota);
-margin-bottom:25px;
-}
-
 .curso ul{
 list-style:none;
 margin:25px 0;
@@ -205,34 +212,35 @@ margin-bottom:10px;
 font-weight:600;
 }
 
-.disclaimer{
-background:#f1f1f1;
-padding:25px;
-border-radius:12px;
-font-size:0.95rem;
-text-align:left;
-margin-top:35px;
-border-left:5px solid var(--verde);
-}
-
+/* ---------- SOBRE MI ---------- */
 .sobre-mi{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:50px;
+align-items:start;
 }
 
-.caja-destacada{
+.caja-credenciales{
 background:var(--verde);
 color:white;
-padding:30px;
-border-radius:15px;
+padding:35px;
+border-radius:18px;
 }
 
+.caja-credenciales ul{
+list-style:none;
+}
+
+.caja-credenciales li{
+margin-bottom:12px;
+font-weight:600;
+}
+
+/* ---------- CONTACTO ---------- */
 .contacto{
 background:var(--verde-oscuro);
 color:white;
 text-align:center;
-padding:90px 20px;
 }
 
 .contacto a{
@@ -241,6 +249,7 @@ font-weight:700;
 text-decoration:none;
 }
 
+/* ---------- FOOTER ---------- */
 footer{
 background:var(--negro);
 color:white;
@@ -256,24 +265,33 @@ margin-top:15px;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:2.4rem;}
+.nav-links{display:none;}
 .sobre-mi{grid-template-columns:1fr;}
+.hero h1{font-size:2.4rem;}
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<nav>
+<div class="nav-container">
+<a href="#inicio" class="logo">Travesía Psicopedagógica</a>
+<ul class="nav-links">
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#abordaje">Abordaje</a></li>
+<li><a href="#propuesta">Propuesta</a></li>
+<li><a href="#curso">Curso</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</div>
+</nav>
+
+<section id="inicio" class="hero">
 <h1>Travesía Psicopedagógica</h1>
 <p class="tagline">“El aprendizaje es el motor de la autonomía”</p>
 
-<img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga – Psicopedagoga">
-
-<div class="foto-info">
-Lic. Ariadna Ornella Salomé Cariaga<br>
-Matrícula Profesional MP P 126475 – Provincia de Córdoba
-</div>
+<img src="perfil.jpg" alt="Lic. Ariadna Ornella Salomé Cariaga">
 
 <p>
 Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso de aprendizaje encuentra barreras, desde la inclusión escolar hasta el fortalecimiento cognitivo en adultos.
@@ -282,48 +300,35 @@ Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso 
 <a class="btn" href="https://wa.me/543541215892" target="_blank">Comenzar la travesía</a>
 </section>
 
-<section>
-<h2>Servicios Profesionales</h2>
+<section id="servicios">
+<h2>Servicios profesionales</h2>
 <p class="subtitulo">Atención online</p>
 
 <div class="servicios">
-<div class="card"><h3>🧠 Evaluaciones psicopedagógicas</h3>
-<p>Informes técnicos y clínicos que funcionan como mapas reales. Elaboración de documentos que permiten a médicos, escuelas y familias hablar el mismo idioma.</p></div>
-
-<div class="card"><h3>📄 Diagnóstico integral</h3>
-<p>Abordaje clínico de dificultades del aprendizaje en niños, adolescentes y adultos. Especialización en neuropsicología del aprendizaje.</p></div>
-
-<div class="card"><h3>🌱 Tratamiento psicopedagógico</h3>
-<p>Intervenciones personalizadas basadas en estrategias de rehabilitación y acompañamiento en proyectos de vida y desarrollo académico.</p></div>
-
-<div class="card"><h3>📘 Adecuaciones curriculares</h3>
-<p>Diseño de planes de intervención adaptados a cada perfil, potenciando la autonomía del estudiante en instituciones educativas.</p></div>
-
-<div class="card"><h3>🏫 Acompañamiento escolar</h3>
-<p>Trabajo interdisciplinario con familias y equipos docentes para implementar estrategias de inclusión real en casos particulares.</p></div>
-
-<div class="card"><h3>🧭 Adolescentes y adultos mayores</h3>
-<p>Fortalecimiento cognitivo, alto rendimiento y estrategias de aprendizaje a lo largo de toda la vida, incluyendo procesos de orientación vocacional.</p></div>
+<div class="card"><h3>🧠 Evaluaciones psicopedagógicas</h3><p>Informes técnicos y clínicos que funcionan como mapas reales.</p></div>
+<div class="card"><h3>📄 Diagnóstico integral</h3><p>Abordaje clínico en niños, adolescentes y adultos.</p></div>
+<div class="card"><h3>🌱 Tratamiento psicopedagógico</h3><p>Intervenciones personalizadas y acompañamiento en proyectos de vida.</p></div>
+<div class="card"><h3>📘 Adecuaciones curriculares</h3><p>Planes adaptados que potencian la autonomía.</p></div>
+<div class="card"><h3>🏫 Acompañamiento escolar</h3><p>Trabajo interdisciplinario con familias y docentes.</p></div>
+<div class="card"><h3>🧭 Adolescentes y adultos</h3><p>Fortalecimiento cognitivo y orientación vocacional.</p></div>
 </div>
 </section>
 
-<section class="metodologia">
+<section id="abordaje" class="metodologia">
 <h2>Mi abordaje</h2>
 <div class="pilares">
 <div class="pilar"><span>📊</span><p>Rigurosidad científica y planes de acción claros.</p></div>
-<div class="pilar"><span>🗺️</span><p>Informes con sentido: mapas reales para saber exactamente qué paso dar mañana.</p></div>
-<div class="pilar"><span>🤝</span><p>Visión de inclusión real: el entorno como facilitador y no como obstáculo.</p></div>
+<div class="pilar"><span>🗺️</span><p>Informes con sentido, no diagnósticos para archivar.</p></div>
+<div class="pilar"><span>🤝</span><p>Inclusión real y cotidiana.</p></div>
 </div>
 </section>
 
-<section>
-<h2>Propuesta de formación</h2>
+<section id="curso">
+<h2>Curso</h2>
 <div class="curso">
 <span class="tag">PRIMER LANZAMIENTO</span>
 <h3>Escribir para sanar</h3>
-
-<p>Herramientas de escritura para el bienestar emocional. Método respaldado por años de investigación académica y práctica literaria.</p>
-<p><em>“Sanando las heridas de la infancia y fortaleciendo tu presente”</em></p>
+<p>Herramientas de escritura para el bienestar emocional.</p>
 
 <ul>
 <li>✔ Trabajo personalizado</li>
@@ -331,47 +336,41 @@ Mi trabajo es asegurar que ese motor no se detenga. Intervengo donde el proceso 
 <li>✔ Espacio de covisión</li>
 </ul>
 
-<a class="btn" href="https://wa.me/543541215892" target="_blank">Reservar mi lugar</a>
-
-<div class="disclaimer">
-Esta actividad de formación ofrece estrategias de escritura creativa y reflexiva como herramientas de autoconocimiento y procesamiento emocional desde un enfoque psicopedagógico. No constituye tratamiento psicoterapéutico ni reemplaza atención médica o psicológica profesional. Dirigido a público general interesado en explorar el vínculo entre escritura y bienestar emocional.
-</div>
+<a class="btn" href="https://wa.me/543541215892">Reservar mi lugar</a>
 </div>
 </section>
 
-<section>
+<section id="propuesta">
 <h2>Sobre mí</h2>
 <div class="sobre-mi">
 <p>
-Soy Licenciada en Psicopedagogía egresada de la Facultad de Educación y Salud – Universidad Provincial de Córdoba (FES-UPC), con formación integral en diagnóstico y tratamiento de dificultades de aprendizaje. Mi especialización incluye neuropsicología del aprendizaje y estrategias de inclusión escolar.
+Licenciada en Psicopedagogía egresada de la Facultad de Educación y Salud – Universidad Provincial de Córdoba (FES-UPC), con especialización en neuropsicología del aprendizaje y estrategias de inclusión escolar.
 </p>
 
-<div class="caja-destacada">
-<p><strong>Matrícula Profesional:</strong> MP P 126575</p>
-<p>Licenciada en Psicopedagogía – FES-UPC</p>
-<p>Especialización en Neuropsicología del Aprendizaje</p>
-<p>Formación en Estrategias de Inclusión Escolar</p>
-<p>Abordaje clínico interdisciplinario</p>
+<div class="caja-credenciales">
+<ul>
+<li>Matrícula profesional MP P 126575</li>
+<li>Licenciada en Psicopedagogía – FES-UPC</li>
+<li>Especialización en Neuropsicología del Aprendizaje</li>
+<li>Formación en Estrategias de Inclusión Escolar</li>
+<li>Experiencia en abordaje clínico interdisciplinario</li>
+</ul>
 </div>
 </div>
 </section>
 
-<section class="contacto">
+<section id="contacto" class="contacto">
 <h2>Hablemos</h2>
-<p>Si buscás transformar la incertidumbre de un diagnóstico en una estrategia de evolución personal, estoy aquí para acompañarte.</p>
-<p>📲 WhatsApp – respuestas las 24 hs<br>
-<a href="https://wa.me/543541215892">+54 3541 215892</a></p>
-<p>📧 Consultas detalladas: <a href="mailto:lic.cariaga@gmail.com">lic.cariaga@gmail.com</a></p>
+<p>📲 WhatsApp – respuestas las 24 hs</p>
+<p><a href="https://wa.me/543541215892">+54 3541 215892</a></p>
+<p>📧 lic.cariaga@gmail.com</p>
 <p>Atención online</p>
 </section>
 
 <footer>
 <p><strong>Travesía Psicopedagógica</strong></p>
 <p>Lic. Ariadna Ornella Salomé Cariaga | MP P 126475</p>
-<p>lic.cariaga@gmail.com | +54 3541 215892</p>
-<div class="ley">
-Ejercicio profesional regulado por la Ley 7619 de la Provincia de Córdoba
-</div>
+<p>Ejercicio profesional regulado por la Ley 7619 de la Provincia de Córdoba</p>
 </footer>
 
 </body>
